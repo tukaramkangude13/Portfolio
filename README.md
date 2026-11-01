@@ -6,7 +6,7 @@ A responsive, single-page freelance portfolio built with plain HTML, CSS, and Ja
 
 - index.html — portfolio copy, project case studies, inquiry form, metadata, and structured data
 - styles.css — responsive editorial design, focus states, and reduced-motion support
-- script.js — mobile navigation, project inquiry prefill, email-draft flow, and subtle section reveals
+- script.js — persistent light/dark theme, mobile navigation, project inquiry prefill, email-draft flow, and subtle section reveals
 - resume.pdf — the resume supplied by Tukaram
 - favicon.svg — TK brand mark
 - robots.txt and sitemap.xml — crawl guidance for the published portfolio URL

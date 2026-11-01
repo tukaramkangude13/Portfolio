@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f5f0">
+  <meta name="theme-color" content="#f6f5f0" id="theme-color">
   <meta name="description" content="Tukaram Kangude builds responsive React and full-stack web applications, API integrations, and workflow improvements for growing teams.">
   <meta name="author" content="Tukaram Kangude">
   <link rel="canonical" href="https://portfolio-nine-rho-ec8nsfelnz.vercel.app/">
@@ -16,6 +16,13 @@
   <meta name="twitter:description" content="Responsive web apps, practical integrations, and workflow improvements for growing teams.">
   <title>Tukaram Kangude | Freelance Full-Stack Web Developer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    try {
+      if (localStorage.getItem("portfolio-theme") === "dark") {
+        document.documentElement.dataset.theme = "dark";
+      }
+    } catch {}
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
     {
@@ -49,6 +56,11 @@
       <span class="brand-mark" aria-hidden="true">TK</span>
       <span class="brand-name">Tukaram Kangude</span>
     </a>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Toggle dark mode">
+      <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.2 15.4A8.8 8.8 0 0 1 8.6 3.8 8.9 8.9 0 1 0 20.2 15.4Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>
+      <span>Dark mode</span>
+    </button>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
       <span></span><span></span>
     </button>
