@@ -5,9 +5,9 @@ A responsive, single-page freelance portfolio built with plain HTML, CSS, and Ja
 ## Contents
 
 - index.html — portfolio copy, project case studies, inquiry form, metadata, and structured data
-- styles.css — reference-inspired navy sidebar, full-height photo hero, alternating section bands, responsive layouts, and dark/light themes
+- styles.css — reference-inspired navy sidebar, portrait-led hero, alternating section bands, responsive layouts, and dark/light themes
 - script.js — persistent light/dark theme, mobile navigation, active section state, project inquiry prefill, email-draft flow, and subtle section reveals
-- assets/img/profile.jpg and assets/img/hero-background.jpg — optimized portfolio photos from the supplied reference project
+- assets/img/profile.jpg and assets/img/hero-photo.jpg — responsive crops from Tukaram's confirmed photo for the sidebar, hero, and share preview
 - resume.pdf — the resume supplied by Tukaram
 - favicon.svg — TK brand mark
 - robots.txt and sitemap.xml — crawl guidance for the published portfolio URL
