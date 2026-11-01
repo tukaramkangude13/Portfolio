@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-nine-rho-ec8nsfelnz.vercel.app/sitemap.xml

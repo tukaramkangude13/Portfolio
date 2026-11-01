@@ -30,6 +30,16 @@
 
   const contactForm = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
+  const serviceSelect = document.getElementById("contact-service");
+  const projectField = document.getElementById("contact-project");
+
+  document.querySelectorAll("[data-inquiry-service]").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (serviceSelect) serviceSelect.value = link.dataset.inquiryService || "";
+      if (projectField) projectField.value = link.dataset.inquiryProject || "";
+    });
+  });
+
   if (contactForm && formStatus) {
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -38,19 +48,34 @@
       const values = new FormData(contactForm);
       const name = String(values.get("name") || "").trim();
       const email = String(values.get("email") || "").trim();
-      const service = String(values.get("service") || "").trim() || "Not specified";
+      const service = serviceSelect?.value
+        ? serviceSelect.selectedOptions[0].textContent.trim()
+        : "Not specified";
+      const project = String(values.get("project") || "").trim() || "Not specified";
+      const budget = String(values.get("budget") || "").trim() || "Not specified";
+      const timelineSelect = document.getElementById("contact-timeline");
+      const timeline = timelineSelect?.value
+        ? timelineSelect.selectedOptions[0].textContent.trim()
+        : "Not specified";
+      const targetDate = String(values.get("target_date") || "").trim() || "Not specified";
       const message = String(values.get("message") || "").trim();
-      const subject = "Project enquiry from " + name;
+      const subject = project === "Not specified"
+        ? "Freelance project enquiry from " + name
+        : "Project enquiry: " + project;
       const body = [
         "Name: " + name,
         "Email: " + email,
         "Project type: " + service,
+        "Project reference: " + project,
+        "Approximate budget: " + budget,
+        "Target timing: " + timeline,
+        "Target date: " + targetDate,
         "",
         "Project details:",
         message
       ].join("\r\n");
 
-      formStatus.textContent = "Your email app should open with a draft. Review it and send when you’re ready.";
+      formStatus.textContent = "Your email app should open with a draft. Review the details and send it when you’re ready.";
       window.location.href = "mailto:tukaramkangude24@gmail.com?subject="
         + encodeURIComponent(subject)
         + "&body="

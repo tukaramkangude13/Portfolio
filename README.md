@@ -1,23 +1,24 @@
 # Tukaram Kangude — Freelance Portfolio
 
-A responsive, single-page portfolio built with plain HTML, CSS, and JavaScript. It has no build step or third-party runtime dependencies.
-
-## View the site
-
-Open index.html in a modern browser or publish the folder to a static host.
+A responsive, single-page freelance portfolio built with plain HTML, CSS, and JavaScript. It has no build step or third-party runtime dependencies.
 
 ## Contents
 
-- index.html — portfolio sections, project details, metadata, and contact form
-- styles.css — responsive layout, visual design, focus states, and reduced-motion support
-- script.js — mobile navigation, project inquiry email draft, and subtle section reveals
+- index.html — portfolio copy, project case studies, inquiry form, metadata, and structured data
+- styles.css — responsive editorial design, focus states, and reduced-motion support
+- script.js — mobile navigation, project inquiry prefill, email-draft flow, and subtle section reveals
+- resume.pdf — the resume supplied by Tukaram
 - favicon.svg — TK brand mark
-- resume.pdf — downloadable resume
+- robots.txt and sitemap.xml — crawl guidance for the published portfolio URL
+
+## Project previews
+
+The portfolio source and the checked local project folders did not contain genuine application screenshots. Project cards use typographic labels rather than simulated UI. The DevTinder and YouTube demo links are included; Netflix-GPT currently has a source link only because its configured Firebase hosting URL returns “Site Not Found.”
 
 ## Contact form
 
-The form validates its fields in the browser and opens a prefilled email draft addressed to Tukaram. The site does not send or store submissions. A server-backed form can be connected later if direct web submission is needed.
+The form validates required fields in the browser and opens a prefilled email draft with the inquiry details. The site has no form backend and does not send or store submissions. A server-backed form can be added if direct submission is needed.
 
-## Before publishing
+## Update after a domain change
 
-Confirm that the contact details and resume are current, and open each external project link from the deployed site. Add a canonical URL, Open Graph image, sitemap, and robots.txt after the production domain is known.
+Update the canonical URL, Open Graph URL, structured data, robots.txt, and sitemap.xml together if the production domain changes.
