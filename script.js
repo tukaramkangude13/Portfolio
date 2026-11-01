@@ -7,7 +7,7 @@
     const isDark = theme === "dark";
     document.documentElement.dataset.theme = isDark ? "dark" : "light";
     themeButton?.setAttribute("aria-pressed", String(isDark));
-    if (themeColorMeta) themeColorMeta.content = isDark ? "#040b14" : "#f6f5f0";
+    if (themeColorMeta) themeColorMeta.content = "#040b14";
 
     if (persist) {
       try {
@@ -44,6 +44,28 @@
         setMenuOpen(false);
         menuButton.focus();
       }
+    });
+  }
+
+  if (navigation && "IntersectionObserver" in window) {
+    const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const current = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((first, second) => first.boundingClientRect.top - second.boundingClientRect.top)[0];
+      if (!current) return;
+
+      sectionLinks.forEach((link) => {
+        const isCurrent = link.hash === "#" + current.target.id;
+        link.classList.toggle("is-active", isCurrent);
+        if (isCurrent) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-25% 0px -65% 0px", threshold: 0 });
+
+    sectionLinks.forEach((link) => {
+      const section = document.querySelector(link.hash);
+      if (section) sectionObserver.observe(section);
     });
   }
 

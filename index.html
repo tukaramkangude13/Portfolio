@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f5f0" id="theme-color">
+  <meta name="theme-color" content="#040b14" id="theme-color">
   <meta name="description" content="Tukaram Kangude builds responsive React and full-stack web applications, API integrations, and workflow improvements for growing teams.">
   <meta name="author" content="Tukaram Kangude">
   <link rel="canonical" href="https://portfolio-nine-rho-ec8nsfelnz.vercel.app/">
@@ -11,9 +11,12 @@
   <meta property="og:url" content="https://portfolio-nine-rho-ec8nsfelnz.vercel.app/">
   <meta property="og:title" content="Tukaram Kangude | Full-Stack Web Developer">
   <meta property="og:description" content="Responsive web apps, practical integrations, and workflow improvements for growing teams.">
+  <meta property="og:image" content="https://portfolio-nine-rho-ec8nsfelnz.vercel.app/assets/img/hero-background.jpg">
+  <meta property="og:image:alt" content="Tukaram Kangude in a server room, used as the portfolio hero background">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tukaram Kangude | Full-Stack Web Developer">
   <meta name="twitter:description" content="Responsive web apps, practical integrations, and workflow improvements for growing teams.">
+  <meta name="twitter:image" content="https://portfolio-nine-rho-ec8nsfelnz.vercel.app/assets/img/hero-background.jpg">
   <title>Tukaram Kangude | Freelance Full-Stack Web Developer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>
@@ -51,32 +54,41 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Tukaram Kangude, home">
-      <span class="brand-mark" aria-hidden="true">TK</span>
-      <span class="brand-name">Tukaram Kangude</span>
+  <header class="site-header" id="site-header">
+    <a class="sidebar-brand" href="#home" aria-label="Tukaram Kangude, home">
+      <img class="sidebar-portrait" src="assets/img/profile.jpg" width="112" height="112" alt="Tukaram Kangude">
+      <span class="sidebar-name">Tukaram Kangude</span>
+      <span class="sidebar-role">Full-Stack Web Developer</span>
     </a>
+    <div class="sidebar-socials" aria-label="Social links">
+      <a href="https://github.com/tukaramkangude13" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span aria-hidden="true">GH</span></a>
+      <a href="https://www.linkedin.com/in/tukaram-kangude-04193932a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span aria-hidden="true">in</span></a>
+      <a href="mailto:tukaramkangude24@gmail.com" aria-label="Email"><span aria-hidden="true">@</span></a>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="#home" aria-current="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+      <a href="#services"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-13 5h18m-11-1v3h4v-3"/></svg><span>Services</span></a>
+      <a href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg><span>Projects</span></a>
+      <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-13 5h18"/></svg><span>Experience</span></a>
+      <a href="#process"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><path d="M11 5h8m-8 7h8m-8 7h8"/></svg><span>How I work</span></a>
+      <a href="#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 1 1 4.2 1.6c-.9.9-1.9 1.2-1.9 2.9m0 3h.01"/></svg><span>FAQ</span></a>
+      <a href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>About</span></a>
+      <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>Contact</span></a>
+      <a class="nav-resume" href="resume.pdf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 13h6m-6 4h6"/></svg><span>Resume <span aria-hidden="true">↗</span></span></a>
+    </nav>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Toggle dark mode">
       <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.2 15.4A8.8 8.8 0 0 1 8.6 3.8 8.9 8.9 0 1 0 20.2 15.4Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>
       <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>
       <span>Dark mode</span>
     </button>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-      <span></span><span></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#process">Process</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Hire me</a>
-      <a class="nav-resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
-    </nav>
   </header>
 
   <main id="main">
-    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-background" src="assets/img/hero-background.jpg" width="1536" height="1024" alt="" aria-hidden="true" fetchpriority="high">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> FULL-STACK WEB DEVELOPER <span aria-hidden="true">·</span> INDIA</p>
         <h1 id="hero-title">Web apps that make <em>work simpler.</em></h1>
@@ -86,18 +98,8 @@
           <a class="button button-secondary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
         </div>
         <p class="hero-availability"><span aria-hidden="true">●</span> Freelance project inquiries welcome</p>
+        <p class="hero-techline">React <span>·</span> Node.js <span>·</span> REST APIs <span>·</span> MongoDB</p>
       </div>
-      <aside class="hero-card" aria-labelledby="hero-card-title">
-        <div class="hero-card-top"><span>WHAT I CAN HELP WITH</span><span class="hero-card-index">TK / 01</span></div>
-        <div class="hero-monogram" aria-hidden="true">TK</div>
-        <h2 id="hero-card-title">Move a web product forward.</h2>
-        <ul class="hero-help-list">
-          <li>Launch a responsive website or web app</li>
-          <li>Connect an interface to APIs and data</li>
-          <li>Improve an existing product workflow</li>
-        </ul>
-        <div class="hero-card-footer"><span>React</span><span>Node.js</span><span>REST APIs</span><span>MongoDB</span></div>
-      </aside>
     </section>
 
     <section class="services-section section-wrap" id="services" aria-labelledby="services-title">
